@@ -49,6 +49,19 @@ def move_rectangle():
     pass
 
 def move_triangle():
+    print("Move triangle")
+    # 가로 800 세로 600 바닥 60
+    move_point1()
+    move_point2()
+    move_point3()
+    pass
+
+
+def move_point1():
+    pass
+def move_point2():
+    pass
+def move_point3():
     pass
 
 def move_circle():
