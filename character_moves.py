@@ -4,12 +4,12 @@ import math
 open_canvas()
 
 boy = load_image('character.png')
-
+grass = load_image('grass.png')
 
 def move_top():
     print('Moving top')
     for x in range(0, 800, 5):
-        draw_boy(x, 550)
+        draw(x, 550)
     pass
 
 
@@ -43,13 +43,14 @@ def move_circle():
     for degree in range(0, 360):
         x = r * math.cos(math.radians(degree)) + 400
         y = r * math.sin(math.radians(degree)) + 300
-        draw_boy(x, y)
+        draw(x, y)
     pass
 
 
-def draw_boy(x: float, y: float):
+def draw(x: float, y: float):
     clear_canvas_now()
     boy.draw_now(x, y)
+    grass.draw_now(400,0)
     delay(0.01)
 
 
