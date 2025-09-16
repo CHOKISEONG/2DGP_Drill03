@@ -66,6 +66,12 @@ def move_point1():
         draw(x,y)
     pass
 def move_point2():
+    x = 400
+    y = 550
+    while y > 60 and x < 770:
+        x += 370 / 97
+        y -= 490 / 97
+        draw(x, y)
     pass
 def move_point3():
     pass
