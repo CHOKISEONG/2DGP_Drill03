@@ -34,6 +34,12 @@ def move_left():
     pass
 
 
+def draw(x: float, y: float):
+    clear_canvas_now()
+    boy.draw_now(x, y)
+    grass.draw_now(400,0)
+    delay(0.004)
+
 def move_rectangle():
     print("Move rectangle")
     move_top()
@@ -42,6 +48,8 @@ def move_rectangle():
     move_left()
     pass
 
+def move_triangle():
+    pass
 
 def move_circle():
     print("Move circle")
@@ -52,17 +60,11 @@ def move_circle():
         draw(x, y)
     pass
 
-
-def draw(x: float, y: float):
-    clear_canvas_now()
-    boy.draw_now(x, y)
-    grass.draw_now(400,0)
-    delay(0.004)
-
-
 while True:
-    move_circle()
     move_rectangle()
+    move_triangle()
+    move_circle()
+
     #break
 
 close_canvas()
