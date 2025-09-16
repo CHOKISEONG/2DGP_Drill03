@@ -38,7 +38,7 @@ def draw(x: float, y: float):
     clear_canvas_now()
     boy.draw_now(x, y)
     grass.draw_now(400,0)
-    delay(0.004)
+    delay(0.01)
 
 def move_rectangle():
     print("Move rectangle")
@@ -58,6 +58,12 @@ def move_triangle():
 
 
 def move_point1():
+    x = 30
+    y = 60
+    while y < 550 and x < 400:
+        x += 370 / 97
+        y += 490 / 97
+        draw(x,y)
     pass
 def move_point2():
     pass
@@ -74,9 +80,9 @@ def move_circle():
     pass
 
 while True:
-    move_rectangle()
+    #move_rectangle()
     move_triangle()
-    move_circle()
+    #move_circle()
 
     #break
 
