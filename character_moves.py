@@ -6,34 +6,6 @@ open_canvas()
 boy = load_image('character.png')
 grass = load_image('grass.png')
 
-def move_top():
-    print('Moving top')
-    for x in range(30, 770, 5):
-        draw(x, 550)
-    pass
-
-
-def move_right():
-    print('Moving right')
-    for y in range(550, 60, -5):
-        draw(770, y)
-    pass
-
-
-def move_bottom():
-    print('Moving bottom')
-    for x in range(770, 30, -5):
-        draw(x, 60)
-    pass
-
-
-def move_left():
-    print('Moving left')
-    for y in range(60, 550, 5):
-        draw(30, y)
-    pass
-
-
 def draw(x: float, y: float):
     clear_canvas_now()
     boy.draw_now(x, y)
@@ -48,14 +20,29 @@ def move_rectangle():
     move_left()
     pass
 
+def move_top():
+    for x in range(30, 770, 5):
+        draw(x, 550)
+    pass
+def move_right():
+    for y in range(550, 60, -5):
+        draw(770, y)
+    pass
+def move_bottom():
+    for x in range(770, 30, -5):
+        draw(x, 60)
+    pass
+def move_left():
+    for y in range(60, 550, 5):
+        draw(30, y)
+    pass
+
 def move_triangle():
     print("Move triangle")
-    # 가로 800 세로 600 바닥 60
     move_point1()
     move_point2()
     move_point3()
     pass
-
 
 def move_point1():
     x = 30
@@ -90,10 +77,9 @@ def move_circle():
     pass
 
 while True:
-    #move_rectangle()
+    move_rectangle()
     move_triangle()
-    #move_circle()
-
+    move_circle()
     #break
 
 close_canvas()
