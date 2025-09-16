@@ -74,6 +74,10 @@ def move_point2():
         draw(x, y)
     pass
 def move_point3():
+    x = 770
+    while x > 30:
+        x -= 740 / 147
+        draw(x, 60)
     pass
 
 def move_circle():
